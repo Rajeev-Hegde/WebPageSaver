@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Web Page Saver</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Select Files to Display</string>
+    <string name="drawer_close">Closed</string>
+    <string name="select2">Choose a Folder</string>
+   
+
+</resources>

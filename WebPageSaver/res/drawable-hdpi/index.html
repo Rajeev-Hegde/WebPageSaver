@@ -1,0 +1,154 @@
+<html style="background-color:#eeeeee;" >
+<head>
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <script type="text/javascript" src="file:///android_asset/Resources/scripts/respond.min.js"></script>
+       <script type="text/javascript" src="file:///android_asset/Resources/scripts/jquery.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+ <script type="text/javascript">
+ var strnum=1;
+ var string1='<div style="text-align:center;">'+
+              '<b style="font-family:rosemary;opacity:0.7;align:center;position:relative;">Overview</b>'+
+             ' </div> '+
+             '<p style="font-family:rosemary;">Open the required web page to be downloaded in your browser and then share it or by providing url in the text box inside the app.</p>';
+ var string2='<div style="text-align:center;">'+
+              '<b style="font-family:rosemary;opacity:0.7;align:center;position:relative;">In app usage</b>'+
+             ' </div> '+
+               ' <ol style="color:black;font-family:rosemary;opacity:0.9;" >'+
+                  '<li>After providing URL press Go Button.</li>'+ 
+                  '<li>You can also press Go without providing URL to provide Google home page.</li>'+
+                  '<li>You can browse inside the app untill you want the specific page to be downloaded.</li>'+
+                  '<li>Once you want the loaded page to be downloaded press the menu button to save the page in eisting or new folder.</li>'+
+             '</ol>';
+  var string3='<div style="text-align:center;">'+
+              '<b style="font-family:rosemary;opacity:0.7;align:center;position:relative;">Saving page from browser</b>'+
+               ' </div> '+
+               '<ol style="color:black;font-family:rosemary;opacity:0.9;">'+
+                '<li>Open the page in your browser and press the share button.</li>'+
+                '<li>Select the offline webViewer icon.</li>'+
+                '<li>When the page gets loaded in the app you can download page as given above.</li>'+
+               '</ol>'+ 
+              '</li>'; 
+  var string4='<div style="text-align:center;">'+
+                '<b style="font-family:rosemary;opacity:0.7;align:center;position:relative;">Deleting and using saved pages</b>'+
+                ' </div> '+
+                 '<ol style="color:black;font-family:rosemary;opacity:0.9;">'+
+                  '<li>Swipe right to get the list of downloaded files.</li>'+
+                  '<li>Select the folder in which your page is saved.</li>'+
+                  '<li>Select your file to open it.</li>'+
+                  '<li>To Delete the page long click on the file to get delete option</li>'+ 
+                '</ol>'+
+                '</li>';          
+                       
+  
+     function LoadMright(){
+          strnum++;
+          if(strnum<=4){
+                    switch(strnum)
+                    {
+                      case 2: $("#centerDiv").fadeOut(function() {
+                      $(this).html(string2).slideDown();
+                      });
+                      break;
+                      case 3: $("#centerDiv").fadeOut(function() {
+                      $(this).html(string3).slideDown();
+                      });
+                      break;
+                      case 4: $("#centerDiv").fadeOut(function() {
+                      $(this).html(string4).slideDown();
+                      });
+                      
+                    
+                    }
+                   
+            }
+            if(strnum>4)strnum=4;
+        }
+        function LoadMleft(){
+          strnum--;
+          if(strnum>=1){
+                    switch(strnum)
+                    {
+                      case 1: $("#centerDiv").fadeOut(function() {
+                      $(this).html(string1).slideDown();
+                      });
+                      break;
+                      case 2: $("#centerDiv").fadeOut(function() {
+                      $(this).html(string2).slideDown();
+                      });
+                      break;
+                      case 3: $("#centerDiv").fadeOut(function() {
+                      $(this).html(string3).slideDown();
+                      });
+                      
+                    
+                    }
+                   
+            } if(strnum<1)strnum=1;
+        }
+ </script>       
+<style type="text/css">
+html{
+font-size:17px;
+}
+@media(max-width:900px){
+html{
+font-size:16px;
+}
+}
+@media(max-width:400px){
+html{
+font-size:10px;
+}
+}
+
+h1{
+font-size:3rem;
+}
+h2{
+font-size:2.6rem;
+}
+h3{
+font-size:2.1rem;
+}
+b{
+ font-size:1.8rem;
+}
+li{
+    font-size:1.6rem;
+}
+p{
+font-size:1.8rem;
+}
+@font-face{
+  font-family: "rosemary";
+  src: url('file:///android_asset/Resources/fonts/DroidSans.ttf');
+}
+</style>
+</head> 
+<div style="text-align:center;">
+<h2 style="color:black;font-family:rosemary;opacity:0.7">Welcome To Web Page Saver</h2>
+</div>
+<b style="color:black;font-family:rosemary;opacity:0.6">This app can be used to save web pages for offline viewing.</b>
+<h3 style="color:black;font-family:rosemary;opacity:0.7">Usage instructions:</h3>
+
+ <div id="centerDiv">
+ <div style="text-align:center;" >
+  <b style="font-family:rosemary;opacity:0.7;align:center;position:relative;">Overview</b>
+  </div>
+ <p style="font-family:rosemary;">Open the required web page to be downloaded in your browser and then share it or by providing url in the text box inside the app.</p>
+      
+ </div>
+
+<table style="position:fixed;bottom:0;width:100%;">
+<tr>
+<td style="width:25em;"> 
+<a href="#" onclick="LoadMleft();return false;"> <img src="file:///android_res/drawable/ic_action_previous_item.png" /> </a>
+</td>
+<td  style="width:67em;"></td>
+<td  style="width:8em;">
+ <a href="#" onclick="LoadMright();return false;"> <img src="file:///android_res/drawable/ic_action_next_item.png"/></a>
+</td>
+</tr>
+</table>
+</html>

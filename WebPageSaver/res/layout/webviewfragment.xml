@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/webFragment"   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#3349" >
+
+        <EditText
+            android:id="@+id/input_url"
+            android:layout_width="245dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.49"
+            android:hint="Enter Url"
+            android:textColorHint="#444444"
+            android:textColor="@android:color/black" 
+             />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:text="Go"
+            android:background="#0077EE"
+            android:textColor="@android:color/white"
+            android:onClick="handleInputUrl" />
+
+    </LinearLayout>
+    
+    <WebView
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
